@@ -21,6 +21,8 @@ public interface FilmService {
     List<Film> getFilmsByRating(Integer rating);
 
     List<Human> loadActors(String actorsID);
+    
+    List<Film> getAllFilms();
 
     Human loadDirector(Integer id);
 

@@ -158,6 +158,25 @@ public class FilmDataBase implements FilmService {
     }
 
     @Override
+	public List<Film> getAllFilms() {
+    	List<Film> films = new ArrayList<Film>();
+        try {
+            this.dataBase.connect(this.dataBaseLogin, this.dataBasePassword);
+            Connection connection = this.dataBase.getConnection();
+            if (connection != null) {
+                String sqlRequest = "select * from " + this.tableName + " ORDER BY rating DESC";
+                PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest);
+                ResultSet result = preparedStatement.executeQuery();
+                films = fillFilmsByResult(result);
+            }
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return films;
+	}
+    
+    @Override
     public List<Human> loadActors(String actorsId) {
         String[] strActorsId = actorsId.split(";");
         List<Integer> intActorsId = new ArrayList<Integer>();

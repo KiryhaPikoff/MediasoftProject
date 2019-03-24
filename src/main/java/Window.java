@@ -37,6 +37,7 @@ public class Window extends JFrame {
     private final String byCountryHuman = "by human country";
     private final String byCountryFilm = "by film country";
     private final String getAllHumans = "get all humans";
+    private final String getAllFilms = "get all films";
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -94,6 +95,7 @@ public class Window extends JFrame {
     
     private void initRequestField() {
     	 requestField = new JTextField();
+    	 requestField.setToolTipText("");
          requestField.setBackground(Color.WHITE);
          requestField.setBounds(10, 11, 426, 22);
          content.add(requestField); 
@@ -108,6 +110,7 @@ public class Window extends JFrame {
         findChoice.add(this.byCountryHuman);
         findChoice.add(this.byCountryFilm);
         findChoice.add(this.getAllHumans);
+        findChoice.add(this.getAllFilms);
         
         content.add(findChoice);
     }
@@ -169,6 +172,16 @@ public class Window extends JFrame {
 	    					scrollPane.setViewportView(resultTable);		
 	    				} else {
 	    					requestField.setText("Таблица с людьми пуста!");
+	    				}
+	    				break;
+	    			}
+	    			case getAllFilms: {
+	    				List<Film> films = new FilmDataBase().getAllFilms();
+	    				if(films != null) {   
+	    					resultTable = new ResultTableOfFilms(films);
+	    					scrollPane.setViewportView(resultTable);		
+	    				} else {
+	    					requestField.setText("Таблица с фильмами пуста!");
 	    				}
 	    				break;
 	    			}
