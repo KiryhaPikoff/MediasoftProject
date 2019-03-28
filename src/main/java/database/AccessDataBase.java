@@ -9,9 +9,9 @@ public class AccessDataBase implements DataBaseService {
     private String url = "jdbc:ucanaccess://E:/work/src/main/resources/dataBase.mdb";
     private Connection connection;
 
-    public void connect(String login, String password) throws Exception {
-        Class.forName(this.className);
-        this.connection = DriverManager.getConnection(this.url, login, password);
+    public void connect(String login, String password) throws ConnectException, ClassNotFoundException, SQLException {
+			Class.forName(this.className);
+			this.connection = DriverManager.getConnection(this.url, login, password);
     }
 
     public Connection getConnection() {

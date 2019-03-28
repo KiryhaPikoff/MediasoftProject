@@ -27,15 +27,15 @@ public class Film {
     @Override
     public String toString() {
         StringBuffer outString = new StringBuffer();
-        outString.append("Название фильма: " + this.getName() + "\n");
-        outString.append("Жанр: " + this.getGenre() + "\n");
-        outString.append("Рейтинг: " + this.getRating() + "\n");
-        outString.append("Год выпуска: " + this.getReleaseYear() + "\n");
-        outString.append("Страна: " + this.getCountry() + "\n");
-        outString.append("Режиссёр: " + "\n" + this.getDirector() + "\n");
-        outString.append("Актёры: " + "\n");
+        outString.append("РќР°Р·РІР°РЅРёРµ: " + this.getName() + "\n");
+        outString.append("Р–Р°РЅСЂ: " + this.getGenre() + "\n");
+        outString.append("Р РµР№С‚РёРЅРі: " + this.getRating() + "\n");
+        outString.append("Р“РѕРґ РІС‹РїСѓСЃРєР°: " + this.getReleaseYear() + "\n");
+        outString.append("РЎС‚СЂР°РЅР°: " + this.getCountry() + "\n");
+        outString.append("Р РµР¶РёСЃСЃС‘СЂ: " + "\n" + this.getDirector() + "\n");
+        outString.append("РђРєС‚С‘СЂС‹: " + "\n");
         this.actors.forEach(outString::append);
-        outString.append("\n" + "Аннотация: " + this.getDescription() + "\n");
+        outString.append("\n" + "РђРЅРЅРѕС‚Р°С†РёСЏ: " + this.getDescription() + "\n");
         return outString.toString();
     }
 

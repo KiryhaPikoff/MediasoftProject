@@ -25,7 +25,7 @@ public class FilmDataBase implements FilmService {
     private String releaseYearField = "releaseYear";
     private String directorIdField = "directorId";
     private String descriptionField = "description";
-    private String imageField = "image";
+    private String imageField = "image"; 
     private String ratingField = "rating";
 
     public FilmDataBase(String login, String password) {
@@ -48,33 +48,39 @@ public class FilmDataBase implements FilmService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest);
                 preparedStatement.setInt(1, id);
                 ResultSet result = preparedStatement.executeQuery();
-                film = this.fillFilmByResult(result);
+                
+                while(result.next()) {
+                	film = new Film();
+                	
+	                film.setID(result.getInt(this.idField));
+	                String actorsId = result.getString(this.actorsIdField);
+	                String[] strActorsId = actorsId.split(";");
+	                List<Integer> intActorsId = new ArrayList<Integer>();
+	                for (String actorId : strActorsId) {
+	                	intActorsId.add(Integer.valueOf(actorId));
+	                }
+	                List<Human> actors = new ArrayList<Human>();
+	                HumanDataBase humanDataBase = new HumanDataBase();
+	                for (Integer actorId : intActorsId) {
+	                	actors.add(humanDataBase.getHumanById(actorId));
+	                }
+	                film.setActors(actors);
+	                film.setName(result.getString(this.nameFilmField));
+	                film.setGenre(Genre.valueOf(result.getString(this.genreField)));
+	                film.setCountry(result.getString(this.countryField));
+	                film.setDirector(new HumanDataBase().getHumanById(result.getInt(this.directorIdField)));
+	                film.setDescription(result.getString(this.descriptionField));
+	                film.setReleaseYear(result.getString(this.releaseYearField));
+	                film.setImage(ImageIO.read(result.getBlob(this.imageField).getBinaryStream()));
+	                film.setRating(result.getInt(this.ratingField));
+                }
             }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        dataBase.disconnect();
         return film;
-    }
-
-    @Override
-    public List<Film> getFilmsByName(String nameFilm) {
-        List<Film> films = new ArrayList<Film>();
-        try {
-            this.dataBase.connect(this.dataBaseLogin, this.dataBasePassword);
-            Connection connection = this.dataBase.getConnection();
-            if (connection != null) {
-                String sqlRequest = "select * from " + this.tableName + " where " + this.nameFilmField + " = ?";
-                PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest);
-                preparedStatement.setString(1, nameFilm);
-                ResultSet result = preparedStatement.executeQuery();
-                films = fillFilmsByResult(result);
-            }
-            connection.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return films;
     }
 
     @Override
@@ -88,12 +94,22 @@ public class FilmDataBase implements FilmService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest);
                 preparedStatement.setString(1, releaseDate);
                 ResultSet result = preparedStatement.executeQuery();
-                films = fillFilmsByResult(result);
-            }
+                while (result.next()) {
+                    Film film = new Film();
+                    film.setID(result.getInt(this.idField));
+                    film.setName(result.getString(this.nameFilmField));
+                    film.setGenre(Genre.valueOf(result.getString(this.genreField)));
+                    film.setCountry(result.getString(this.countryField));
+                    film.setReleaseYear(result.getString(this.releaseYearField));
+                    film.setRating(result.getInt(this.ratingField));
+
+                    films.add(film);
+                }            }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        dataBase.disconnect();
         return films;
     }
 
@@ -108,12 +124,22 @@ public class FilmDataBase implements FilmService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest);
                 preparedStatement.setString(1, country);
                 ResultSet result = preparedStatement.executeQuery();
-                films = fillFilmsByResult(result);
-            }
+                while (result.next()) {
+                    Film film = new Film();
+                    film.setID(result.getInt(this.idField));
+                    film.setName(result.getString(this.nameFilmField));
+                    film.setGenre(Genre.valueOf(result.getString(this.genreField)));
+                    film.setCountry(result.getString(this.countryField));
+                    film.setReleaseYear(result.getString(this.releaseYearField));
+                    film.setRating(result.getInt(this.ratingField));
+
+                    films.add(film);
+                }            }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        dataBase.disconnect();
         return films;
     }
 
@@ -128,12 +154,22 @@ public class FilmDataBase implements FilmService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest);
                 preparedStatement.setString(1, genre.toString());
                 ResultSet result = preparedStatement.executeQuery();
-                films = fillFilmsByResult(result);
-            }
+                while (result.next()) {
+                    Film film = new Film();
+                    film.setID(result.getInt(this.idField));
+                    film.setName(result.getString(this.nameFilmField));
+                    film.setGenre(Genre.valueOf(result.getString(this.genreField)));
+                    film.setCountry(result.getString(this.countryField));
+                    film.setReleaseYear(result.getString(this.releaseYearField));
+                    film.setRating(result.getInt(this.ratingField));
+
+                    films.add(film);
+                }            }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        dataBase.disconnect();
         return films;
     }
 
@@ -148,12 +184,22 @@ public class FilmDataBase implements FilmService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest);
                 preparedStatement.setInt(1, rating);
                 ResultSet result = preparedStatement.executeQuery();
-                films = fillFilmsByResult(result);
-            }
+                while (result.next()) {
+                    Film film = new Film();
+                    film.setID(result.getInt(this.idField));
+                    film.setName(result.getString(this.nameFilmField));
+                    film.setGenre(Genre.valueOf(result.getString(this.genreField)));
+                    film.setCountry(result.getString(this.countryField));
+                    film.setReleaseYear(result.getString(this.releaseYearField));
+                    film.setRating(result.getInt(this.ratingField));
+
+                    films.add(film);
+                }            }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        dataBase.disconnect();
         return films;
     }
 
@@ -167,82 +213,27 @@ public class FilmDataBase implements FilmService {
                 String sqlRequest = "select * from " + this.tableName + " ORDER BY rating DESC";
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest);
                 ResultSet result = preparedStatement.executeQuery();
-                films = fillFilmsByResult(result);
+                try {
+                    while (result.next()) {
+                        Film film = new Film();
+                        film.setID(result.getInt(this.idField));
+                        film.setName(result.getString(this.nameFilmField));
+                        film.setGenre(Genre.valueOf(result.getString(this.genreField)));
+                        film.setCountry(result.getString(this.countryField));
+                        film.setReleaseYear(result.getString(this.releaseYearField));
+                        film.setRating(result.getInt(this.ratingField));
+
+                        films.add(film);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        dataBase.disconnect();
         return films;
 	}
-    
-    @Override
-    public List<Human> loadActors(String actorsId) {
-        String[] strActorsId = actorsId.split(";");
-        List<Integer> intActorsId = new ArrayList<Integer>();
-        for (String actorId : strActorsId) {
-            intActorsId.add(Integer.valueOf(actorId));
-        }
-        List<Human> actors = new ArrayList<Human>();
-        HumanDataBase humanDataBase = new HumanDataBase();
-        for (Integer actorId : intActorsId) {
-            actors.add(humanDataBase.getHumanById(actorId));
-        }
-        return actors;
-    }
-
-    @Override
-    public Human loadDirector(Integer id) {
-        HumanDataBase humanDataBase = new HumanDataBase();
-        return humanDataBase.getHumanById(id);
-    }
-
-    private List<Film> fillFilmsByResult(ResultSet result) {
-        List<Film> films = new ArrayList<Film>();
-        try {
-            while (result.next()) {
-                Film film = new Film();
-                film.setID(result.getInt(this.idField));
-                String actorsId = result.getString(this.actorsIdField);
-                film.setActors(this.loadActors(actorsId));
-                film.setName(result.getString(this.nameFilmField));
-                film.setGenre(Genre.valueOf(result.getString(this.genreField)));
-                film.setCountry(result.getString(this.countryField));
-                film.setDirector(this.loadDirector(result.getInt(this.directorIdField)));
-                film.setDescription(result.getString(this.descriptionField));
-                film.setReleaseYear(result.getString(this.releaseYearField));
-                film.setImage(ImageIO.read(result.getBlob(this.imageField).getBinaryStream()));
-                film.setRating(result.getInt(this.ratingField));
-
-                films.add(film);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return films;
-    }
-
-    private Film fillFilmByResult(ResultSet result) {
-        Film film = new Film();
-        try {
-            while (result.next()) {
-                film.setID(result.getInt(this.idField));
-                String actorsId = result.getString(this.actorsIdField);
-                film.setActors(this.loadActors(actorsId));
-                film.setName(result.getString(this.nameFilmField));
-                film.setGenre(Genre.valueOf(result.getString(this.genreField)));
-                film.setCountry(result.getString(this.countryField));
-                film.setDirector(this.loadDirector(result.getInt(this.directorIdField)));
-                film.setDescription(result.getString(this.descriptionField));
-                film.setReleaseYear(result.getString(this.releaseYearField));
-                film.setImage(ImageIO.read(result.getBlob(this.imageField).getBinaryStream()));
-                film.setRating(result.getInt(this.ratingField));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return film;
-    }
 }

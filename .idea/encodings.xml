@@ -3,5 +3,6 @@
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/src/main/java/Window.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/film/Film.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/frames/Window.java" charset="windows-1251" />
   </component>
 </project>

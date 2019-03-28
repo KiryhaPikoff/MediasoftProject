@@ -5,13 +5,17 @@ import human.Human;
 import human.Role;
 
 import javax.imageio.ImageIO;
+import javax.imageio.stream.ImageInputStream;
+
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class HumanDataBase implements HumanService {
     private AccessDataBase dataBase = new AccessDataBase();
+    private List<Human> humans = null;
     private String dataBaseLogin = null;
     private String dataBasePassword = null;
     private String tableName = "Humans";
@@ -46,14 +50,30 @@ public class HumanDataBase implements HumanService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setInt(1, id);
                 ResultSet result = preparedStatement.executeQuery();
-                human = this.fillHumanByResult(result);
+  
+                while (result.next()) {
+                    human = new Human();
+                    human.setLastName(result.getString(this.lastNameField));
+                    human.setFirstName(result.getString(this.firstNameField));
+                    human.setMiddleName(result.getString(this.middleNameField));
+                    human.setAge(result.getInt(this.ageField));
+                    human.setBirthdate(result.getDate(this.birthdateField).toLocalDate());
+                    human.setRole(Role.valueOf(result.getString(this.roleField)));
+                    human.setCountry(result.getString(this.countryField));
+                    try {
+    					human.setPhoto(ImageIO.read(result.getBlob(this.imageField).getBinaryStream()));
+    				} catch (IOException e) {
+    					// TODO Auto-generated catch block
+        					e.printStackTrace();
+        			}
+                    human.setDescription(result.getString(this.descriptionFirld));
+                }
+                connection.close();
             }
-            connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         dataBase.disconnect();
-
         return human;
     }
 
@@ -68,14 +88,23 @@ public class HumanDataBase implements HumanService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, lastName);
                 ResultSet result = preparedStatement.executeQuery();
-                humans = this.fillHumansByResult(result);
+                while (result.next()) {
+                    
+                    Human human = new Human();
+                    human.setId(result.getInt(this.idField));
+                    human.setLastName(result.getString(this.lastNameField));
+                    human.setFirstName(result.getString(this.firstNameField));
+                    human.setMiddleName(result.getString(this.middleNameField));
+                  
+                    humans.add(human);
+                    human = null;
+                }
             }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         dataBase.disconnect();
-
         return humans;
     }
 
@@ -90,14 +119,23 @@ public class HumanDataBase implements HumanService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, firstName);
                 ResultSet result = preparedStatement.executeQuery();
-                humans = this.fillHumansByResult(result);
+                while (result.next()) {
+                    
+                    Human human = new Human();
+                    human.setId(result.getInt(this.idField));
+                    human.setLastName(result.getString(this.lastNameField));
+                    human.setFirstName(result.getString(this.firstNameField));
+                    human.setMiddleName(result.getString(this.middleNameField));
+                  
+                    humans.add(human);
+                    human = null;
+                }
             }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         dataBase.disconnect();
-
         return humans;
     }
 
@@ -112,14 +150,23 @@ public class HumanDataBase implements HumanService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, middleName);
                 ResultSet result = preparedStatement.executeQuery();
-                humans = this.fillHumansByResult(result);
+                while (result.next()) {
+                    
+                    Human human = new Human();
+                    human.setId(result.getInt(this.idField));
+                    human.setLastName(result.getString(this.lastNameField));
+                    human.setFirstName(result.getString(this.firstNameField));
+                    human.setMiddleName(result.getString(this.middleNameField));
+                  
+                    humans.add(human);
+                    human = null;
+                }
             }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         dataBase.disconnect();
-
         return humans;
     }
 
@@ -134,14 +181,23 @@ public class HumanDataBase implements HumanService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, country);
                 ResultSet result = preparedStatement.executeQuery();
-                humans = this.fillHumansByResult(result);
+                while (result.next()) {
+                    
+                    Human human = new Human();
+                    human.setId(result.getInt(this.idField));
+                    human.setLastName(result.getString(this.lastNameField));
+                    human.setFirstName(result.getString(this.firstNameField));
+                    human.setMiddleName(result.getString(this.middleNameField));
+                  
+                    humans.add(human);
+                    human = null;
+                }
             }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         dataBase.disconnect();
-
         return humans;
     }
 
@@ -156,14 +212,23 @@ public class HumanDataBase implements HumanService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, role.toString());
                 ResultSet result = preparedStatement.executeQuery();
-                humans = this.fillHumansByResult(result);
+                while (result.next()) {
+                    
+                    Human human = new Human();
+                    human.setId(result.getInt(this.idField));
+                    human.setLastName(result.getString(this.lastNameField));
+                    human.setFirstName(result.getString(this.firstNameField));
+                    human.setMiddleName(result.getString(this.middleNameField));
+                  
+                    humans.add(human);
+                    human = null;
+                }
             }
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         dataBase.disconnect();
-
         return humans;
     }
 
@@ -178,41 +243,16 @@ public class HumanDataBase implements HumanService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setInt(1, age);
                 ResultSet result = preparedStatement.executeQuery();
-                humans = this.fillHumansByResult(result);
-            }
-            connection.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        dataBase.disconnect();
-
-        return humans;
-    }
-
-    public List<Human> getAllHumans() {
-        List<Human> humans = null;
-
-        try {
-            this.dataBase.connect(null, null);
-            Connection connection = this.dataBase.getConnection();
-            if (connection != null) {
-                humans = new ArrayList<Human>();
-                Statement statement = connection.createStatement();
-                String sql = "select * from " + this.tableName + " ORDER BY firstName";
-                ResultSet result = statement.executeQuery(sql);
                 while (result.next()) {
+                
                     Human human = new Human();
                     human.setId(result.getInt(this.idField));
                     human.setLastName(result.getString(this.lastNameField));
                     human.setFirstName(result.getString(this.firstNameField));
                     human.setMiddleName(result.getString(this.middleNameField));
-                    human.setAge(result.getInt(this.ageField));
-                    human.setBirthdate(result.getDate(this.birthdateField).toLocalDate());
-                    human.setRole(Role.valueOf(result.getString(this.roleField)));
-                    human.setCountry(result.getString(this.countryField));
-                    human.setPhoto(ImageIO.read(result.getBlob(this.imageField).getBinaryStream()));
-                    human.setDescription(result.getString(this.descriptionFirld));
+                  
                     humans.add(human);
+                    human = null;
                 }
             }
             connection.close();
@@ -220,58 +260,37 @@ public class HumanDataBase implements HumanService {
             e.printStackTrace();
         }
         dataBase.disconnect();
-
         return humans;
     }
 
-    private List<Human> fillHumansByResult(ResultSet result) {
-        List<Human> humans = new ArrayList<Human>();
+    public List<Human> getAllHumans() {
+        this.humans = null;
 
         try {
-            while (result.next()) {
-                Human human = new Human();
-                human.setId(result.getInt(this.idField));
-                human.setLastName(result.getString(this.lastNameField));
-                human.setFirstName(result.getString(this.firstNameField));
-                human.setMiddleName(result.getString(this.middleNameField));
-                human.setAge(result.getInt(this.ageField));
-                human.setBirthdate(result.getDate(this.birthdateField).toLocalDate());
-                human.setRole(Role.valueOf(result.getString(this.roleField)));
-                human.setCountry(result.getString(this.countryField));
-                human.setPhoto(ImageIO.read(result.getBlob(this.imageField).getBinaryStream()));
-                human.setDescription(result.getString(this.descriptionFirld));
-
-                humans.add(human);
+            this.dataBase.connect(this.dataBaseLogin, this.dataBasePassword);
+            Connection connection = this.dataBase.getConnection();
+            if (connection != null) {
+                humans = new ArrayList<Human>();
+                Statement statement = connection.createStatement();
+                String sql = "select * from " + this.tableName + " ORDER BY firstName";
+                ResultSet result = statement.executeQuery(sql);
+                while (result.next()) {
+                	
+                    Human human = new Human();
+                    human.setId(result.getInt(this.idField));
+                    human.setLastName(result.getString(this.lastNameField));
+                    human.setFirstName(result.getString(this.firstNameField));
+                    human.setMiddleName(result.getString(this.middleNameField));
+                  
+                    humans.add(human);
+                    human = null;
+                }
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+            connection.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
+        dataBase.disconnect();
         return humans;
-    }
-
-    private Human fillHumanByResult(ResultSet result) {
-        Human human = null;
-
-        try {
-            while (result.next()) {
-                human = new Human();
-                human.setLastName(result.getString(this.lastNameField));
-                human.setFirstName(result.getString(this.firstNameField));
-                human.setMiddleName(result.getString(this.middleNameField));
-                human.setAge(result.getInt(this.ageField));
-                human.setBirthdate(result.getDate(this.birthdateField).toLocalDate());
-                human.setRole(Role.valueOf(result.getString(this.roleField)));
-                human.setCountry(result.getString(this.countryField));
-                human.setPhoto(ImageIO.read(result.getBlob(this.imageField).getBinaryStream()));
-                human.setDescription(result.getString(this.descriptionFirld));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return human;
     }
 }

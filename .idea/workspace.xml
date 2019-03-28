@@ -1,7 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6309587-838e-4727-a7d6-96d3a031e1db" name="Default Changelist" comment="" />
+    <list default="true" id="d6309587-838e-4727-a7d6-96d3a031e1db" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frames/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/AccessDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AccessDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DataBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DataBaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frames/HumanFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/human/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tables/ResultTableOfFilms.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tables/ResultTableOfHumans.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dataBase.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataBase.mdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/films/Godunov_serial.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/films/Viy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/films/kanic_na_more.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/films/odin_doma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Андрианов_АВ_76.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Безруков_СВ_73.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Дельпи_Ж_69.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Калкин_М_80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Коламбус_К_58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Кузнецов_ЮА_46.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Мерзликин_АИ_73.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Никифоров_ДЕ_77.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Пеши_Д_43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Смоляков_АИ_58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Степченко_ОА_64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Флейминг_Д_65.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Чадов_АА_81.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/humans/Эльмоснино_Э_64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FilmFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HumanFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ResultTableOfFilms$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ResultTableOfFilms.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ResultTableOfHumans$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ResultTableOfHumans.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Window$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Window$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Window.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dataBase.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dataBase.mdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/AccessDataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/AccessDataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DataBaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DataBaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/HumanService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/HumanService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/film/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/film/Film.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/human/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/human/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/films/Godunov_serial.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/films/Viy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/films/kanic_na_more.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/films/odin_doma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Андрианов_АВ_76.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Безруков_СВ_73.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Дельпи_Ж_69.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Калкин_М_80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Коламбус_К_58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Кузнецов_ЮА_46.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Мерзликин_АИ_73.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Никифоров_ДЕ_77.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Пеши_Д_43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Смоляков_АИ_58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Степченко_ОА_64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Флейминг_Д_65.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Чадов_АА_81.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/humans/Эльмоснино_Э_64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/icons/humanIcon.jpg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,28 +82,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Window.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/film/Film.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="133" column="1" selection-start-line="133" selection-start-column="1" selection-end-line="133" selection-end-column="1" />
+            <state relative-caret-position="88">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding>
-                <element signature="e#1584#1585#0" expanded="true" />
-                <element signature="e#1611#1612#0" expanded="true" />
+                <element signature="method#Film#0;class#Film#0" />
+                <element signature="method#toString#0;class#Film#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/film/Film.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frames/FilmInfoFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-540">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="method#Film#0;class#Film#0" />
-                <element signature="method#toString#0;class#Film#0" />
-              </folding>
+            <state relative-caret-position="88">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frames/HumanInfoFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frames/tables/ResultTableOfFilms.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frames/tables/ResultTableOfHumans.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1034">
+              <caret line="58" column="62" lean-forward="true" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -62,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/human/Human.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="94" column="21" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+            <state relative-caret-position="775">
+              <caret line="99" column="21" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
               <folding>
                 <element signature="method#Human#0;class#Human#0" />
                 <element signature="method#toString#0;class#Human#0" />
@@ -73,122 +163,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/database/FilmDataBase.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frames/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="2784">
+              <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
               <folding>
-                <element signature="method#getFilmById#0;class#FilmDataBase#0" />
-                <element signature="e#1035#1648#0" />
-                <element signature="e#1217#1606#1" />
-                <element signature="e#1669#1713#0" />
-                <element signature="method#getFilmsByName#0;class#FilmDataBase#0" />
-                <element signature="e#1874#2499#0" />
-                <element signature="e#2056#2457#1" />
-                <element signature="e#2520#2564#0" />
-                <element signature="method#getFilmsByReleaseDate#0;class#FilmDataBase#0" />
-                <element signature="e#2736#3367#0" />
-                <element signature="e#2918#3325#1" />
-                <element signature="e#3388#3432#0" />
-                <element signature="method#getFilmsByCountry#0;class#FilmDataBase#0" />
-                <element signature="e#3596#4219#0" />
-                <element signature="e#3778#4177#1" />
-                <element signature="e#4240#4284#0" />
-                <element signature="method#getFilmsByGenre#0;class#FilmDataBase#0" />
-                <element signature="e#4443#5073#0" />
-                <element signature="e#4625#5031#1" />
-                <element signature="e#5094#5138#0" />
-                <element signature="method#getFilmsByGenre#1;class#FilmDataBase#0" />
-                <element signature="e#5304#5935#0" />
-                <element signature="e#5487#5893#1" />
-                <element signature="e#5956#6000#0" />
-                <element signature="method#loadActors#0;class#FilmDataBase#0" />
-                <element signature="e#5391#5457#1" />
-                <element signature="e#5614#5686#1" />
-                <element signature="method#loadDirector#0;class#FilmDataBase#0" />
-                <element signature="method#fillFilmsByResult#0;class#FilmDataBase#0" />
-                <element signature="e#6011#6798#0" />
-                <element signature="e#6046#6788#1" />
-                <element signature="e#6819#6863#0" />
-                <element signature="method#fillFilmByResult#0;class#FilmDataBase#0" />
-                <element signature="e#6992#7836#0" />
-                <element signature="e#7027#7826#1" />
-                <element signature="e#7857#7901#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/database/FilmService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/database/DataBaseService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/database/HumanDataBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="902">
-              <caret line="168" selection-start-line="168" selection-end-line="168" />
-              <folding>
-                <element signature="method#HumanDataBase#0;class#HumanDataBase#0" />
-                <element signature="method#HumanDataBase#1;class#HumanDataBase#0" />
-                <element signature="method#getHumanById#0;class#HumanDataBase#0" />
-                <element signature="e#825#1427#0" />
-                <element signature="e#1008#1385#1" />
-                <element signature="e#1448#1492#0" />
-                <element signature="method#getHumansByLastName#0;class#HumanDataBase#0" />
-                <element signature="e#1664#2283#0" />
-                <element signature="e#1847#2241#1" />
-                <element signature="e#2304#2348#0" />
-                <element signature="method#getHumansByFirstName#0;class#HumanDataBase#0" />
-                <element signature="e#2523#3144#0" />
-                <element signature="e#2706#3102#1" />
-                <element signature="e#3165#3209#0" />
-                <element signature="method#getHumansByMiddleName#0;class#HumanDataBase#0" />
-                <element signature="e#3386#4009#0" />
-                <element signature="e#3569#3967#1" />
-                <element signature="e#4030#4074#0" />
-                <element signature="method#getHumansByCountry#0;class#HumanDataBase#0" />
-                <element signature="e#4245#4862#0" />
-                <element signature="e#4428#4820#1" />
-                <element signature="e#4883#4927#0" />
-                <element signature="method#getHumansByRole#0;class#HumanDataBase#0" />
-                <element signature="e#5090#5712#0" />
-                <element signature="e#5273#5670#1" />
-                <element signature="e#5733#5777#0" />
-                <element signature="method#getHumansByAge#0;class#HumanDataBase#0" />
-                <element signature="e#5941#6547#0" />
-                <element signature="e#6124#6505#1" />
-                <element signature="e#6568#6612#0" />
-                <element signature="method#getAllHumans#0;class#HumanDataBase#0" />
-                <element signature="e#6732#7880#0" />
-                <element signature="e#6884#7838#1" />
-                <element signature="e#7169#7824#1" />
-                <element signature="e#7901#7945#0" />
-                <element signature="method#fillHumansByResult#0;class#HumanDataBase#0" />
-                <element signature="e#8106#8768#0" />
-                <element signature="e#8142#8758#1" />
-                <element signature="e#8792#8836#0" />
-                <element signature="e#9108#9152#0" />
-                <element signature="method#fillHumanByResult#0;class#HumanDataBase#0" />
-                <element signature="e#8964#9540#0" />
-                <element signature="e#9000#9530#1" />
-                <element signature="e#9564#9608#0" />
-                <element signature="e#9893#9937#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/database/AccessDataBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state relative-caret-position="198">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -208,6 +198,9 @@
     <findStrings>
       <find>ID</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -234,22 +227,19 @@
         <option value="$PROJECT_DIR$/src/main/java/database/HumanDataBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/film/Film.java" />
         <option value="$PROJECT_DIR$/src/main/java/Window.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frames/Window.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frames/tables/ResultTableOfFilms.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frames/tables/ResultTableOfHumans.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frames/FilmFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frames/FilmInfoFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frames/HumanFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frames/HumanInfoFrame.java" />
       </list>
     </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -265,6 +255,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -296,36 +287,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="work" type="b2602c69:ProjectViewProjectNode" />
-              <item name="work" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="film" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="work" type="b2602c69:ProjectViewProjectNode" />
-              <item name="work" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="human" type="462c0819:PsiDirectoryNode" />
+              <item name="frames" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="right" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="156" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="205" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553443686724" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553792478950" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Repoz/Game/rpg" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -349,7 +323,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Window">
+  <component name="RunManager" selected="Application.Window (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="work" />
@@ -364,8 +338,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="frames.Window" />
+      <module name="work" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="frames.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Window (1)" />
         <item itemvalue="Application.Window" />
         <item itemvalue="Application.Main" />
       </list>
@@ -387,7 +375,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49844238" visible="true" weight="0.2079288" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49844238" visible="true" weight="0.16504854" />
       <window_info id="Structure" order="1" sideWeight="0.50155765" side_tool="true" weight="0.20145631" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -451,77 +439,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Window.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/FilmDataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/DataBaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/AccessDataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/HumanDataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="168" selection-start-line="168" selection-end-line="168" />
+        <state relative-caret-position="594">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
-            <element signature="method#HumanDataBase#0;class#HumanDataBase#0" />
-            <element signature="method#HumanDataBase#1;class#HumanDataBase#0" />
-            <element signature="method#getHumanById#0;class#HumanDataBase#0" />
-            <element signature="e#825#1427#0" />
-            <element signature="e#1008#1385#1" />
-            <element signature="e#1448#1492#0" />
-            <element signature="method#getHumansByLastName#0;class#HumanDataBase#0" />
-            <element signature="e#1664#2283#0" />
-            <element signature="e#1847#2241#1" />
-            <element signature="e#2304#2348#0" />
-            <element signature="method#getHumansByFirstName#0;class#HumanDataBase#0" />
-            <element signature="e#2523#3144#0" />
-            <element signature="e#2706#3102#1" />
-            <element signature="e#3165#3209#0" />
-            <element signature="method#getHumansByMiddleName#0;class#HumanDataBase#0" />
-            <element signature="e#3386#4009#0" />
-            <element signature="e#3569#3967#1" />
-            <element signature="e#4030#4074#0" />
-            <element signature="method#getHumansByCountry#0;class#HumanDataBase#0" />
-            <element signature="e#4245#4862#0" />
-            <element signature="e#4428#4820#1" />
-            <element signature="e#4883#4927#0" />
-            <element signature="method#getHumansByRole#0;class#HumanDataBase#0" />
-            <element signature="e#5090#5712#0" />
-            <element signature="e#5273#5670#1" />
-            <element signature="e#5733#5777#0" />
-            <element signature="method#getHumansByAge#0;class#HumanDataBase#0" />
-            <element signature="e#5941#6547#0" />
-            <element signature="e#6124#6505#1" />
-            <element signature="e#6568#6612#0" />
-            <element signature="method#getAllHumans#0;class#HumanDataBase#0" />
-            <element signature="e#6732#7880#0" />
-            <element signature="e#6884#7838#1" />
-            <element signature="e#7169#7824#1" />
-            <element signature="e#7901#7945#0" />
-            <element signature="method#fillHumansByResult#0;class#HumanDataBase#0" />
-            <element signature="e#8106#8768#0" />
-            <element signature="e#8142#8758#1" />
-            <element signature="e#8792#8836#0" />
-            <element signature="e#9108#9152#0" />
-            <element signature="method#fillHumanByResult#0;class#HumanDataBase#0" />
-            <element signature="e#8964#9540#0" />
-            <element signature="e#9000#9530#1" />
-            <element signature="e#9564#9608#0" />
-            <element signature="e#9893#9937#0" />
+            <element signature="method#getFilmById#0;class#FilmDataBase#0" />
+            <element signature="method#getFilmsByName#0;class#FilmDataBase#0" />
+            <element signature="method#getFilmsByReleaseDate#0;class#FilmDataBase#0" />
+            <element signature="method#getFilmsByCountry#0;class#FilmDataBase#0" />
+            <element signature="method#getFilmsByGenre#0;class#FilmDataBase#0" />
+            <element signature="method#fillFilmByResult#0;class#FilmDataBase#0" />
           </folding>
         </state>
       </provider>
@@ -533,65 +463,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/FilmDataBase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/HumanDataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="902">
+          <caret line="168" selection-start-line="168" selection-end-line="168" />
           <folding>
-            <element signature="method#getFilmById#0;class#FilmDataBase#0" />
-            <element signature="e#1035#1648#0" />
-            <element signature="e#1217#1606#1" />
-            <element signature="e#1669#1713#0" />
-            <element signature="method#getFilmsByName#0;class#FilmDataBase#0" />
-            <element signature="e#1874#2499#0" />
-            <element signature="e#2056#2457#1" />
-            <element signature="e#2520#2564#0" />
-            <element signature="method#getFilmsByReleaseDate#0;class#FilmDataBase#0" />
-            <element signature="e#2736#3367#0" />
-            <element signature="e#2918#3325#1" />
-            <element signature="e#3388#3432#0" />
-            <element signature="method#getFilmsByCountry#0;class#FilmDataBase#0" />
-            <element signature="e#3596#4219#0" />
-            <element signature="e#3778#4177#1" />
-            <element signature="e#4240#4284#0" />
-            <element signature="method#getFilmsByGenre#0;class#FilmDataBase#0" />
-            <element signature="e#4443#5073#0" />
-            <element signature="e#4625#5031#1" />
-            <element signature="e#5094#5138#0" />
-            <element signature="method#getFilmsByGenre#1;class#FilmDataBase#0" />
-            <element signature="e#5304#5935#0" />
-            <element signature="e#5487#5893#1" />
-            <element signature="e#5956#6000#0" />
-            <element signature="method#loadActors#0;class#FilmDataBase#0" />
-            <element signature="e#5391#5457#1" />
-            <element signature="e#5614#5686#1" />
-            <element signature="method#loadDirector#0;class#FilmDataBase#0" />
-            <element signature="method#fillFilmsByResult#0;class#FilmDataBase#0" />
-            <element signature="e#6011#6798#0" />
-            <element signature="e#6046#6788#1" />
-            <element signature="e#6819#6863#0" />
-            <element signature="method#fillFilmByResult#0;class#FilmDataBase#0" />
-            <element signature="e#6992#7836#0" />
-            <element signature="e#7027#7826#1" />
-            <element signature="e#7857#7901#0" />
+            <element signature="method#HumanDataBase#0;class#HumanDataBase#0" />
+            <element signature="method#HumanDataBase#1;class#HumanDataBase#0" />
+            <element signature="method#getHumanById#0;class#HumanDataBase#0" />
+            <element signature="method#getHumansByLastName#0;class#HumanDataBase#0" />
+            <element signature="method#getHumansByFirstName#0;class#HumanDataBase#0" />
+            <element signature="method#getHumansByMiddleName#0;class#HumanDataBase#0" />
+            <element signature="method#getHumansByCountry#0;class#HumanDataBase#0" />
+            <element signature="method#getHumansByRole#0;class#HumanDataBase#0" />
+            <element signature="method#getHumansByAge#0;class#HumanDataBase#0" />
+            <element signature="method#getAllHumans#0;class#HumanDataBase#0" />
+            <element signature="method#fillHumansByResult#0;class#HumanDataBase#0" />
+            <element signature="method#fillHumanByResult#0;class#HumanDataBase#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/HumanService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/AccessDataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="418">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/human/Human.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/DataBaseService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="94" column="21" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+        <state relative-caret-position="198">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frames/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2784">
+          <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
           <folding>
-            <element signature="method#Human#0;class#Human#0" />
-            <element signature="method#toString#0;class#Human#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -605,8 +517,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/film/Film.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="88">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding>
             <element signature="method#Film#0;class#Film#0" />
             <element signature="method#toString#0;class#Film#0" />
@@ -614,14 +526,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Window.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/HumanService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="133" column="1" selection-start-line="133" selection-start-column="1" selection-end-line="133" selection-end-column="1" />
+        <state relative-caret-position="110">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frames/tables/ResultTableOfHumans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="58" column="62" lean-forward="true" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frames/tables/ResultTableOfFilms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/human/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="99" column="21" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
           <folding>
-            <element signature="e#1584#1585#0" expanded="true" />
-            <element signature="e#1611#1612#0" expanded="true" />
+            <element signature="method#Human#0;class#Human#0" />
+            <element signature="method#toString#0;class#Human#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frames/FilmInfoFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frames/HumanInfoFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -689,6 +636,17 @@
         </settings>
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">

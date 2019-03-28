@@ -2,6 +2,11 @@ package human;
 
 import java.awt.*;
 import java.time.LocalDate;
+import java.util.logging.LogManager;
+
+import org.apache.commons.logging.impl.Log4JLogger;
+
+import frames.Window;
 
 public class Human {
     private String lastName;
