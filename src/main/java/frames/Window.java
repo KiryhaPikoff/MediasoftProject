@@ -27,6 +27,8 @@ import org.apache.logging.log4j.Logger;
 import database.FilmDataBase;
 import database.HumanDataBase;
 import film.Film;
+import film.Genre;
+import frames.components.AddHumanButton;
 import frames.tables.ResultTableOfFilms;
 import frames.tables.ResultTableOfHumans;
 import human.Human;
@@ -38,6 +40,7 @@ public class Window extends JFrame {
     private JTextField requestField;
     private JScrollPane scrollPane;
     private JButton findBtn;
+    private JButton addHumanBtn;
     private Choice findChoice;
     
     private HumanDataBase humanDataBase;
@@ -76,6 +79,11 @@ public class Window extends JFrame {
         this.initFindButton();	
         this.humanDataBase = new HumanDataBase();
         this.filmDataBase = new FilmDataBase();
+        this.addHumanBtn = new AddHumanButton();
+        addHumanBtn.setBackground(SystemColor.menu);
+        addHumanBtn.setText("Добавить человека в б/д");
+        this.addHumanBtn.setBounds(784, 44, 200, 36);
+        content.add(addHumanBtn);
     }
     
     private void initWindow() {
@@ -88,7 +96,7 @@ public class Window extends JFrame {
     	this.setTitle("Кинобаза");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
-	    setBounds(100, 100, 790, 590);
+	    setBounds(100, 100, 1000, 590);
 	    content = new JPanel();
 	    content.setBackground(SystemColor.inactiveCaption);
 	    content.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -179,6 +187,30 @@ public class Window extends JFrame {
 	    			case byCountryFilm: {
 	    				String country = requestField.getText();
 	    				List<Film> films = new FilmDataBase().getFilmsByCountry(country);
+	    				if(!films.isEmpty()) {   
+	    					resultTable = new ResultTableOfFilms(films);
+	    					scrollPane.setViewportView(resultTable);		
+	    				} else {
+							requestField.setText("Фильмы на найдены!");
+	    				}
+	    				films = null;
+	    				break;
+	    			}
+	    			case byGenreFilm: {
+	    				Genre genre = Genre.valueOf(requestField.getText());
+	    				List<Film> films = new FilmDataBase().getFilmsByGenre(genre);
+	    				if(!films.isEmpty()) {   
+	    					resultTable = new ResultTableOfFilms(films);
+	    					scrollPane.setViewportView(resultTable);		
+	    				} else {
+							requestField.setText("Фильмы на найдены!");
+	    				}
+	    				films = null;
+	    				break;
+	    			}
+	    			case byRatingFilm: {
+	    				Integer rating = Integer.parseInt(requestField.getText());
+	    				List<Film> films = new FilmDataBase().getFilmsByRating(rating);
 	    				if(!films.isEmpty()) {   
 	    					resultTable = new ResultTableOfFilms(films);
 	    					scrollPane.setViewportView(resultTable);		

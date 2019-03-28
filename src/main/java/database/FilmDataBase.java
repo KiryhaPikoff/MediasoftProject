@@ -48,7 +48,7 @@ public class FilmDataBase implements FilmService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest);
                 preparedStatement.setInt(1, id);
                 ResultSet result = preparedStatement.executeQuery();
-                
+             
                 while(result.next()) {
                 	film = new Film();
                 	
