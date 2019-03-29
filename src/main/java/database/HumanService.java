@@ -22,4 +22,10 @@ public interface HumanService {
     List<Human> getHumansByAge(Integer age);
 
     List<Human> getAllHumans();
+    
+    Integer getCountStrings();
+    
+    void addHumanToBase(String id, String firstName, String lastName, String middleName,
+    					String country, String birthdate, String age, String role,
+    					String photoPath, String description);
 }

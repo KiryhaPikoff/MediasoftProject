@@ -10,7 +10,11 @@ import javax.imageio.stream.ImageInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class HumanDataBase implements HumanService {
@@ -293,4 +297,69 @@ public class HumanDataBase implements HumanService {
         dataBase.disconnect();
         return humans;
     }
+
+	@Override
+	public Integer getCountStrings() {
+		Integer count = 0;
+		try {
+			this.dataBase.connect(this.dataBaseLogin, this.dataBasePassword);
+			Connection connection = this.dataBase.getConnection();
+		    if (connection != null) {
+		        Statement statement = connection.createStatement();
+		        String sql = "select count(*) cnt from " + this.tableName;
+		        ResultSet result = statement.executeQuery(sql);
+		        while (result.next()) {
+		         	count = result.getInt("cnt");
+		        }
+		    }
+		    connection.close();
+		 } catch (Exception e) {
+		     e.printStackTrace();
+		 }
+	     dataBase.disconnect();
+	     return count;
+	}
+
+	@Override
+	public void addHumanToBase(String id, String firstName, String lastName, String middleName, String country,
+							   String birthdate, String age, String role, String photoPath, String description) {
+		
+		try {
+			this.dataBase.connect(this.dataBaseLogin, this.dataBasePassword);
+			Connection connection = this.dataBase.getConnection();
+		    if (connection != null) {
+		        List<String> sql = new ArrayList<String>();
+		        	sql.add("INSERT INTO " + this.tableName + " (id) " + "VALUES(" + id + ")");
+		        	sql.add("UPDATE " + this.tableName + " SET firstName =" + firstName + ")");
+		        	sql.add("UPDATE " + this.tableName + " SET lastName =" + lastName + ")");
+		        	sql.add("UPDATE " + this.tableName + " SET middleName =" + middleName + ")");
+		        	sql.add("UPDATE " + this.tableName + " SET country =" + country + ")");
+		        	sql.add("UPDATE " + this.tableName + " SET age =" + age + ")");
+		        	sql.add("UPDATE " + this.tableName + " SET role =" + role + ")");
+		        	sql.add("UPDATE " + this.tableName + " SET description =" + description + ")");
+		        	
+		        	
+		        for (String curSQL : sql) {
+		        	PreparedStatement ps = connection.prepareStatement(curSQL);
+					//	ps.setDate(1, java.sql.Date.valueOf(birthdate));
+					ps.executeUpdate();
+				}
+	    		
+				
+			/*	String sql1 = "UPDATE " + this.tableName + "SET (birthdate)=? WHERE id=" + id;
+				PreparedStatement ps1 = connection.prepareStatement(sql);
+				ps1.setDate(1, java.sql.Date.valueOf(birthdate));
+				ps1.executeUpdate();*/
+											        		
+		        /* UPDATE 'table' SET 'image'= LOAD_FILE('/tmp/img.gif') WHERE 'id'=1 */
+		    	
+		    	
+		    }
+		    connection.close();
+		 } catch (Exception e) {
+		     e.printStackTrace();
+		 }
+	     dataBase.disconnect();
+	}
+	
 }

@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -42,6 +43,8 @@ public class Window extends JFrame {
     private JButton findBtn;
     private JButton addHumanBtn;
     private Choice findChoice;
+    
+    private JFrame humanAddFrame;
     
     private HumanDataBase humanDataBase;
     private FilmDataBase filmDataBase;
@@ -77,13 +80,15 @@ public class Window extends JFrame {
         this.initChoice();
         this.initTable();
         this.initFindButton();	
+        this.initAddHumanButton();
         this.humanDataBase = new HumanDataBase();
         this.filmDataBase = new FilmDataBase();
-        this.addHumanBtn = new AddHumanButton();
-        addHumanBtn.setBackground(SystemColor.menu);
-        addHumanBtn.setText("Добавить человека в б/д");
-        this.addHumanBtn.setBounds(784, 44, 200, 36);
-        content.add(addHumanBtn);
+        
+        
+        
+        //String dat = "Вася";
+       // System.out.println(myCheckerFields.isFIO(dat));
+        System.out.println(Date.valueOf("2012-09-03"));
     }
     
     private void initWindow() {
@@ -101,8 +106,16 @@ public class Window extends JFrame {
 	    content.setBackground(SystemColor.inactiveCaption);
 	    content.setBorder(new EmptyBorder(5, 5, 5, 5));
 	    setContentPane(content);
-	    content.setLayout(null);        
+	    content.setLayout(null); 
 	}
+    
+    private void initAddHumanButton() {
+    	this.addHumanBtn = new AddHumanButton();
+        addHumanBtn.setBackground(SystemColor.menu);
+        addHumanBtn.setText("Добавить человека в б/д");
+        this.addHumanBtn.setBounds(784, 44, 200, 36);
+        content.add(addHumanBtn);
+    }
     
     private void initTable() {
         resultTable = new JTable();
@@ -197,7 +210,13 @@ public class Window extends JFrame {
 	    				break;
 	    			}
 	    			case byGenreFilm: {
-	    				Genre genre = Genre.valueOf(requestField.getText());
+	    				Genre genre = null;
+	    				try {
+	    					genre = Genre.valueOf(requestField.getText());
+						} catch (Exception e2) {
+							e2.printStackTrace();
+							break;
+						}
 	    				List<Film> films = new FilmDataBase().getFilmsByGenre(genre);
 	    				if(!films.isEmpty()) {   
 	    					resultTable = new ResultTableOfFilms(films);
