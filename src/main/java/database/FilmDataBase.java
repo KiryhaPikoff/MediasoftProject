@@ -2,9 +2,14 @@ package database;
 
 import film.Film;
 import film.Genre;
+import frames.RootWindow;
 import human.Human;
 
 import javax.imageio.ImageIO;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,6 +19,7 @@ import java.util.List;
 public class FilmDataBase implements FilmService {
 
     private AccessDataBase dataBase = new AccessDataBase();
+    
     private String dataBaseLogin = null;
     private String dataBasePassword = null;
     private String tableName = "Films";
@@ -27,6 +33,8 @@ public class FilmDataBase implements FilmService {
     private String descriptionField = "description";
     private String imageField = "image"; 
     private String ratingField = "rating";
+    
+    private final Logger logger = LogManager.getLogger(FilmDataBase.class);
 
     public FilmDataBase(String login, String password) {
         this.dataBaseLogin = login;
@@ -73,6 +81,8 @@ public class FilmDataBase implements FilmService {
 	                film.setReleaseYear(result.getString(this.releaseYearField));
 	                film.setImage(ImageIO.read(result.getBlob(this.imageField).getBinaryStream()));
 	                film.setRating(result.getInt(this.ratingField));
+	                
+	                logger.info("успешно взяли даннные для фильма");
                 }
             }
             connection.close();
@@ -104,6 +114,7 @@ public class FilmDataBase implements FilmService {
                     film.setRating(result.getInt(this.ratingField));
 
                     films.add(film);
+                    logger.info("успешно взяли даннные для фильма, добавили в список");
                 }            }
             connection.close();
         } catch (Exception e) {
@@ -134,6 +145,7 @@ public class FilmDataBase implements FilmService {
                     film.setRating(result.getInt(this.ratingField));
 
                     films.add(film);
+                    logger.info("успешно взяли даннные для фильма, добавили в список");
                 }            }
             connection.close();
         } catch (Exception e) {
@@ -164,6 +176,7 @@ public class FilmDataBase implements FilmService {
                     film.setRating(result.getInt(this.ratingField));
 
                     films.add(film);
+                    logger.info("успешно взяли даннные для фильма, добавили в список");
                 }            }
             connection.close();
         } catch (Exception e) {
@@ -194,6 +207,7 @@ public class FilmDataBase implements FilmService {
                     film.setRating(result.getInt(this.ratingField));
 
                     films.add(film);
+                    logger.info("успешно взяли даннные для фильма, добавили в список");
                 }            }
             connection.close();
         } catch (Exception e) {
@@ -224,6 +238,7 @@ public class FilmDataBase implements FilmService {
                         film.setRating(result.getInt(this.ratingField));
 
                         films.add(film);
+                        logger.info("успешно взяли даннные для фильма, добавили в список");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

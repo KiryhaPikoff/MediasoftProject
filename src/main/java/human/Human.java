@@ -6,7 +6,7 @@ import java.util.logging.LogManager;
 
 import org.apache.commons.logging.impl.Log4JLogger;
 
-import frames.Window;
+import frames.RootWindow;
 
 public class Human {
     private String lastName;

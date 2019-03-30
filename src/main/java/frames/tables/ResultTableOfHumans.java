@@ -28,8 +28,8 @@ public class ResultTableOfHumans extends JTable {
 			
 		int i = 0;
 		for (Human human : humans) {
-			this.setValueAt(human.getFirstName(), i, 0);
-			this.setValueAt(human.getLastName(), i, 1);
+			this.setValueAt(human.getLastName(), i, 0);
+			this.setValueAt(human.getFirstName(), i, 1);
 			this.setValueAt(human.getMiddleName(), i, 2);
 			
 			this.setValueAt("\u2753", i, 3); // 2714

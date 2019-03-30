@@ -7,6 +7,14 @@ import human.Role;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.hsqldb.types.BlobInputStream;
+
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -18,7 +26,9 @@ import java.util.Calendar;
 import java.util.List;
 
 public class HumanDataBase implements HumanService {
+	
     private AccessDataBase dataBase = new AccessDataBase();
+    
     private List<Human> humans = null;
     private String dataBaseLogin = null;
     private String dataBasePassword = null;
@@ -33,6 +43,8 @@ public class HumanDataBase implements HumanService {
     private String countryField = "country";
     private String imageField = "photo";
     private String descriptionFirld = "description";
+    
+    private final static Logger logger = LogManager.getLogger(HumanDataBase.class);
 
     public HumanDataBase(String login, String password) {
         this.dataBaseLogin = login;
@@ -71,6 +83,7 @@ public class HumanDataBase implements HumanService {
         					e.printStackTrace();
         			}
                     human.setDescription(result.getString(this.descriptionFirld));
+                    logger.info("успешно взяли данные человека");
                 }
                 connection.close();
             }
@@ -92,8 +105,7 @@ public class HumanDataBase implements HumanService {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, lastName);
                 ResultSet result = preparedStatement.executeQuery();
-                while (result.next()) {
-                    
+                while (result.next()) {  
                     Human human = new Human();
                     human.setId(result.getInt(this.idField));
                     human.setLastName(result.getString(this.lastNameField));
@@ -102,6 +114,7 @@ public class HumanDataBase implements HumanService {
                   
                     humans.add(human);
                     human = null;
+                    logger.info("успешно взяли данные человека, добавили в список");
                 }
             }
             connection.close();
@@ -124,7 +137,6 @@ public class HumanDataBase implements HumanService {
                 preparedStatement.setString(1, firstName);
                 ResultSet result = preparedStatement.executeQuery();
                 while (result.next()) {
-                    
                     Human human = new Human();
                     human.setId(result.getInt(this.idField));
                     human.setLastName(result.getString(this.lastNameField));
@@ -133,6 +145,7 @@ public class HumanDataBase implements HumanService {
                   
                     humans.add(human);
                     human = null;
+                    logger.info("успешно взяли данные человека, добавили в список");
                 }
             }
             connection.close();
@@ -155,7 +168,6 @@ public class HumanDataBase implements HumanService {
                 preparedStatement.setString(1, middleName);
                 ResultSet result = preparedStatement.executeQuery();
                 while (result.next()) {
-                    
                     Human human = new Human();
                     human.setId(result.getInt(this.idField));
                     human.setLastName(result.getString(this.lastNameField));
@@ -164,6 +176,7 @@ public class HumanDataBase implements HumanService {
                   
                     humans.add(human);
                     human = null;
+                    logger.info("успешно взяли данные человека, добавили в список");
                 }
             }
             connection.close();
@@ -186,7 +199,6 @@ public class HumanDataBase implements HumanService {
                 preparedStatement.setString(1, country);
                 ResultSet result = preparedStatement.executeQuery();
                 while (result.next()) {
-                    
                     Human human = new Human();
                     human.setId(result.getInt(this.idField));
                     human.setLastName(result.getString(this.lastNameField));
@@ -195,6 +207,7 @@ public class HumanDataBase implements HumanService {
                   
                     humans.add(human);
                     human = null;
+                    logger.info("успешно взяли данные человека, добавили в список");
                 }
             }
             connection.close();
@@ -217,7 +230,6 @@ public class HumanDataBase implements HumanService {
                 preparedStatement.setString(1, role.toString());
                 ResultSet result = preparedStatement.executeQuery();
                 while (result.next()) {
-                    
                     Human human = new Human();
                     human.setId(result.getInt(this.idField));
                     human.setLastName(result.getString(this.lastNameField));
@@ -226,6 +238,7 @@ public class HumanDataBase implements HumanService {
                   
                     humans.add(human);
                     human = null;
+                    logger.info("успешно взяли данные человека, добавили в список");
                 }
             }
             connection.close();
@@ -248,7 +261,6 @@ public class HumanDataBase implements HumanService {
                 preparedStatement.setInt(1, age);
                 ResultSet result = preparedStatement.executeQuery();
                 while (result.next()) {
-                
                     Human human = new Human();
                     human.setId(result.getInt(this.idField));
                     human.setLastName(result.getString(this.lastNameField));
@@ -257,6 +269,7 @@ public class HumanDataBase implements HumanService {
                   
                     humans.add(human);
                     human = null;
+                    logger.info("успешно взяли данные человека, добавили в список");
                 }
             }
             connection.close();
@@ -279,7 +292,6 @@ public class HumanDataBase implements HumanService {
                 String sql = "select * from " + this.tableName + " ORDER BY firstName";
                 ResultSet result = statement.executeQuery(sql);
                 while (result.next()) {
-                	
                     Human human = new Human();
                     human.setId(result.getInt(this.idField));
                     human.setLastName(result.getString(this.lastNameField));
@@ -288,6 +300,7 @@ public class HumanDataBase implements HumanService {
                   
                     humans.add(human);
                     human = null;
+                    logger.info("успешно взяли данные человека, добавили в список");
                 }
             }
             connection.close();
@@ -328,32 +341,22 @@ public class HumanDataBase implements HumanService {
 			this.dataBase.connect(this.dataBaseLogin, this.dataBasePassword);
 			Connection connection = this.dataBase.getConnection();
 		    if (connection != null) {
-		        List<String> sql = new ArrayList<String>();
-		        	sql.add("INSERT INTO " + this.tableName + " (id) " + "VALUES(" + id + ")");
-		        	sql.add("UPDATE " + this.tableName + " SET firstName =" + firstName + ")");
-		        	sql.add("UPDATE " + this.tableName + " SET lastName =" + lastName + ")");
-		        	sql.add("UPDATE " + this.tableName + " SET middleName =" + middleName + ")");
-		        	sql.add("UPDATE " + this.tableName + " SET country =" + country + ")");
-		        	sql.add("UPDATE " + this.tableName + " SET age =" + age + ")");
-		        	sql.add("UPDATE " + this.tableName + " SET role =" + role + ")");
-		        	sql.add("UPDATE " + this.tableName + " SET description =" + description + ")");
-		        	
-		        	
-		        for (String curSQL : sql) {
-		        	PreparedStatement ps = connection.prepareStatement(curSQL);
-					//	ps.setDate(1, java.sql.Date.valueOf(birthdate));
-					ps.executeUpdate();
-				}
-	    		
-				
-			/*	String sql1 = "UPDATE " + this.tableName + "SET (birthdate)=? WHERE id=" + id;
-				PreparedStatement ps1 = connection.prepareStatement(sql);
-				ps1.setDate(1, java.sql.Date.valueOf(birthdate));
-				ps1.executeUpdate();*/
-											        		
-		        /* UPDATE 'table' SET 'image'= LOAD_FILE('/tmp/img.gif') WHERE 'id'=1 */
+		    	String sql = "INSERT INTO " + this.tableName + " (id, firstName, lastName, middlename, country,"
+		    			+ " birthdate, age, role, photo, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";	 
 		    	
-		    	
+	        	PreparedStatement ps1 = connection.prepareStatement(sql);
+	        	ps1.setInt(1, Integer.parseInt(id));
+	        	ps1.setString(2, firstName);
+	        	ps1.setString(3, lastName);
+	        	ps1.setString(4, middleName);
+	        	ps1.setString(5, country);
+	        	ps1.setDate(6, java.sql.Date.valueOf(birthdate));
+	        	ps1.setInt(7, Integer.parseInt(age));
+	        	ps1.setString(8, role);
+		        ps1.setBlob(9, new FileInputStream(new File(photoPath)));
+	        	ps1.setString(10, description);
+				ps1.executeUpdate();
+				logger.info("человек успешно добавлен в б/д");
 		    }
 		    connection.close();
 		 } catch (Exception e) {

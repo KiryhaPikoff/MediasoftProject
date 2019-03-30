@@ -13,7 +13,10 @@ import java.awt.Color;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 
@@ -65,7 +68,9 @@ public class HumanAddFrame extends JFrame {
 														ageTF.getText(),
 														roleCH.getSelectedItem(),
 														imageTF.getText(),
-														descriptionTF.getText());
+														descriptionTF.getText()
+					);
+					
 				}
 			}
 		});
@@ -73,43 +78,43 @@ public class HumanAddFrame extends JFrame {
 	
 	private boolean isCorrectTextFields() {	
 		boolean isIncorrect = false;
-		if(myCheckerFields.isDate(birthdateTF.getText())) {
+		if(MyCheckerFields.isDate(birthdateTF.getText())) {
 			birthdateTF.setBackground(new Color(174, 255, 174));
 		} else {
 			birthdateTF.setBackground(new Color(255, 174, 174));
 			isIncorrect = true;
 		}
-		if(myCheckerFields.isFIO(firstNameTF.getText())) {
+		if(MyCheckerFields.isFIO(firstNameTF.getText())) {
 			firstNameTF.setBackground(new Color(174, 255, 174));
 		} else {
 			firstNameTF.setBackground(new Color(255, 174, 174));
 			isIncorrect = true;
 		}
-		if(myCheckerFields.isFIO(lastNameTF.getText())) {
+		if(MyCheckerFields.isFIO(lastNameTF.getText())) {
 			lastNameTF.setBackground(new Color(174, 255, 174));
 		} else {
 			lastNameTF.setBackground(new Color(255, 174, 174));
 			isIncorrect = true;
 		}
-		if(myCheckerFields.isFIO(middleNameTF.getText())) {
+		if(MyCheckerFields.isFIO(middleNameTF.getText())) {
 			middleNameTF.setBackground(new Color(174, 255, 174));
 		} else {
 			middleNameTF.setBackground(new Color(255, 174, 174));
 			isIncorrect = true;
 		}
-		if(myCheckerFields.isFIO(countryTF.getText())) {
+		if(MyCheckerFields.isFIO(countryTF.getText())) {
 			countryTF.setBackground(new Color(174, 255, 174));
 		} else {
 			countryTF.setBackground(new Color(255, 174, 174));
 			isIncorrect = true;
 		}
-		if(myCheckerFields.isAge(ageTF.getText())) {
+		if(MyCheckerFields.isAge(ageTF.getText())) {
 			ageTF.setBackground(new Color(174, 255, 174));
 		} else {
 			ageTF.setBackground(new Color(255, 174, 174));
 			isIncorrect = true;
 		}
-		if(myCheckerFields.isImageFile(imageTF.getText())) {
+		if(MyCheckerFields.isImageFile(imageTF.getText())) {
 			imageTF.setBackground(new Color(174, 255, 174));
 		} else {
 			imageTF.setBackground(new Color(255, 174, 174));
@@ -131,14 +136,20 @@ public class HumanAddFrame extends JFrame {
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setBounds(100, 100, 470, 347);
 		this.setTitle(this.title);
+		try {
+			this.setIconImage(ImageIO.read(new File("src/main/resources/images/icons/humanIcon.png")));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	private void initChoice() {
 		roleCH = new Choice();
 		roleCH.setBackground(SystemColor.inactiveCaptionBorder);
 		roleCH.setBounds(112, 194, 343, 17);
-		roleCH.add("Актёр");
-		roleCH.add("Режиссёр");
+		roleCH.add("actor");
+		roleCH.add("director");
 		getContentPane().add(roleCH);
 	}
 	
@@ -154,13 +165,13 @@ public class HumanAddFrame extends JFrame {
 		firstNameTF = new JTextField();
 		firstNameTF.setBackground(SystemColor.inactiveCaptionBorder);
 		firstNameTF.setColumns(10);
-		firstNameTF.setBounds(112, 34, 343, 17);
+		firstNameTF.setBounds(112, 59, 343, 17);
 		getContentPane().add(firstNameTF);
 		
 		lastNameTF = new JTextField();
 		lastNameTF.setBackground(SystemColor.inactiveCaptionBorder);
 		lastNameTF.setColumns(10);
-		lastNameTF.setBounds(112, 59, 343, 17);
+		lastNameTF.setBounds(112, 34, 343, 17);
 		getContentPane().add(lastNameTF);
 		
 		middleNameTF = new JTextField();
@@ -206,11 +217,11 @@ public class HumanAddFrame extends JFrame {
 		getContentPane().add(lblId);
 		
 		JLabel label = new JLabel("Имя:");
-		label.setBounds(10, 36, 46, 17);
+		label.setBounds(10, 60, 46, 17);
 		getContentPane().add(label);
 		
 		JLabel label_1 = new JLabel("Фамилия:");
-		label_1.setBounds(10, 61, 64, 17);
+		label_1.setBounds(10, 35, 64, 17);
 		getContentPane().add(label_1);
 		
 		JLabel label_2 = new JLabel("Отчество:");

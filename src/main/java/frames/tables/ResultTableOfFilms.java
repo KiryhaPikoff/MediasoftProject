@@ -52,15 +52,19 @@ public class ResultTableOfFilms extends JTable {
 		this.addMouseListener(new MouseAdapter() {
          	@Override
          	public void mouseClicked(MouseEvent e) {
-         		Integer currentRow = rowAtPoint(getMousePosition());
-         		Integer currentColumn = columnAtPoint(getMousePosition());
-         		if(currentColumn == 4) {        
-         			Film film = new FilmDataBase().getFilmById(films.get(currentRow).getID());
-         			JFrame filmFrame = new FilmInfoFrame(film);
-         		}
+         		createFrame(films);
          	}
          });
 	}
 
+	
+	private void createFrame(List<Film> films) {
+		Integer currentRow = rowAtPoint(getMousePosition());
+ 		Integer currentColumn = columnAtPoint(getMousePosition());
+ 		if(currentColumn == 4) {        
+ 			Film film = new FilmDataBase().getFilmById(films.get(currentRow).getID());
+ 			JFrame filmFrame = new FilmInfoFrame(film);
+ 		}
+	}
 }
 		
