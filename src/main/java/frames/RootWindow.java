@@ -87,7 +87,7 @@ public class RootWindow extends JFrame {
     	this.setTitle("КиноБаза");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
-	    setBounds(100, 100, 789, 647);
+	    setBounds(100, 100, 789, 509);
 	    content = new JPanel();
 	    content.setBackground(SystemColor.inactiveCaption);
 	    content.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -108,7 +108,7 @@ public class RootWindow extends JFrame {
     private void initScrollPane() {
     	scrollPane = new JScrollPane();
         scrollPane.setBackground(SystemColor.inactiveCaption);
-        scrollPane.setBounds(10, 44, 764, 506);
+        scrollPane.setBounds(10, 44, 764, 371);
         content.add(scrollPane);
         logger.info("scrollPane инициализирован");
     }
@@ -148,7 +148,7 @@ public class RootWindow extends JFrame {
 	    findBtn.setBounds(661, 10, 113, 23);
 	    content.add(findBtn);
 	    this.addHumanBtn = new AddHumanButton();
-	    addHumanBtn.setBounds(10, 562, 205, 44);
+	    addHumanBtn.setBounds(10, 427, 205, 44);
 	    content.add(addHumanBtn);
 	    addHumanBtn.setBackground(SystemColor.menu);
 	    addHumanBtn.setText("Добавить человека в б/д");
@@ -207,6 +207,7 @@ public class RootWindow extends JFrame {
 	    					genre = Genre.valueOf(requestField.getText());
 						} catch (Exception e2) {
 							e2.printStackTrace();
+							requestField.setText("Фильмы на найдены!");
 							break;
 						}
 	    				List<Film> films = new FilmDataBase().getFilmsByGenre(genre);

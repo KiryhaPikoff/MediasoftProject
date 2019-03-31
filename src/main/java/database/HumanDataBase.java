@@ -289,7 +289,7 @@ public class HumanDataBase implements HumanService {
             if (connection != null) {
                 humans = new ArrayList<Human>();
                 Statement statement = connection.createStatement();
-                String sql = "select * from " + this.tableName + " ORDER BY firstName";
+                String sql = "select * from " + this.tableName + " ORDER BY lastName";
                 ResultSet result = statement.executeQuery(sql);
                 while (result.next()) {
                     Human human = new Human();
